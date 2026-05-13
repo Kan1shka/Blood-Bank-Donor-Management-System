@@ -35,18 +35,26 @@ The project shows how database systems can improve reliability, speed, and trans
 
 # DATABASE DESIGN 
 **Core Entities**
+
 •	Staff – Stores admin and operator login details.
+
 •	Hospital – Contains records of hospitals requesting blood.
+
 •	Camp – Stores information about blood donation camps.
 
 **Donor and Blood Management**
+
 •	Donor – Holds personal details and medical information of donors.
+
 •	Camp_Donor – Maps donors who participated in a particular camp.
+
 •	Blood_Unit – Maintains records of collected blood units, including expiry and status.
 
 **Requests and Inventory**
 •	Blood_Request – Stores blood requests made by hospitals or patients.
+
 •	Blood_Issue – Tracks the blood units issued to fulfil requests.
+
 •	Inventory_Log – Logs all inventory actions (add, issue, expire, reserve) for audit and tracking.
 
 ## Key SQL Components
