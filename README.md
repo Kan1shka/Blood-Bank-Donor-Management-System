@@ -34,28 +34,21 @@ The project shows how database systems can improve reliability, speed, and trans
 - SQL
 
 # DATABASE DESIGN 
-**Core Entities**
 
-•	Staff – Stores admin and operator login details.
+### Core Entities
+- **Staff** – Stores admin and operator login details.
+- **Hospital** – Contains records of hospitals requesting blood.
+- **Camp** – Stores information about blood donation camps.
 
-•	Hospital – Contains records of hospitals requesting blood.
+### Donor and Blood Management
+- **Donor** – Holds personal details and medical information of donors.
+- **Camp_Donor** – Maps donors who participated in a particular camp.
+- **Blood_Unit** – Maintains records of collected blood units, including expiry date and status.
 
-•	Camp – Stores information about blood donation camps.
-
-**Donor and Blood Management**
-
-•	Donor – Holds personal details and medical information of donors.
-
-•	Camp_Donor – Maps donors who participated in a particular camp.
-
-•	Blood_Unit – Maintains records of collected blood units, including expiry and status.
-
-**Requests and Inventory**
-•	Blood_Request – Stores blood requests made by hospitals or patients.
-
-•	Blood_Issue – Tracks the blood units issued to fulfil requests.
-
-•	Inventory_Log – Logs all inventory actions (add, issue, expire, reserve) for audit and tracking.
+### Requests and Inventory
+- **Blood_Request** – Stores blood requests made by hospitals or patients.
+- **Blood_Issue** – Tracks the blood units issued to fulfil requests.
+- **Inventory_Log** – Logs all inventory actions such as add, issue, expire, and reserve for audit and tracking.
 
 ## Key SQL Components
 - `DaysLeft(expiry_date)` function to calculate remaining shelf life of blood units
